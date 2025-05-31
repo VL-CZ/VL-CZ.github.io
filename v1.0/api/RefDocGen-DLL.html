@@ -1,0 +1,1586 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Reference documentation</title>
+
+    <script>
+        const savedTheme = localStorage.getItem('refdocgen-theme') || "light"; // get the saved theme
+        document.documentElement.setAttribute('data-bs-theme', savedTheme); // set the 'data-bs-theme' attribute
+
+
+    </script>
+
+    
+    <link href="../Static/styles.css" rel="stylesheet"></head>
+
+<body><nav class="navbar navbar-expand-lg sticky-top menu-bg"><div class="container"><a class="navbar-brand" href="../index.html">Project name</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="../api/index.html">API</a></li><li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li><li class="nav-item"><a class="nav-link" href="../FAQ.html">FAQ</a></li><li class="nav-item"><a class="nav-link" href="../my-custom-page.html">My custom page</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tutorial</a>
+                        <ul class="dropdown-menu"><li><a class="dropdown-item" href="../tutorial\1)-installation.html">1) installation</a></li><li><a class="dropdown-item" href="../tutorial\2)-usage.html">2) usage</a></li></ul></li></ul>
+            <ul class="navbar-nav ms-auto"><li class="nav-item d-flex align-items-center"><form class="me-2 mb-2 mb-lg-0"><select class="form-select" id="language-selector" aria-label="language"><option class="lang-option" value="csharp-lang">C#</option><option class="lang-option" value="other-lang">Other</option></select></form></li>
+
+                
+                <li class="nav-item d-flex align-items-center"><form role="search" class="me-2"><input class="form-control" autocomplete="off" type="search" placeholder="Search" aria-label="Search" id="menu-search-bar" url-target="../search.html" readonly=""></form></li>
+
+                
+                <li class="nav-item" id="theme-switcher"><button class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path></svg></button></li></ul></div></div></nav>
+
+    <div class="container my-4" data-id="page-body"><h1 class="display-4"><samp><span class="refdocgen-text-tertiary">assembly</span>
+                        <span class="refdocgen-text-primary">RefDocGen</span></samp></h1>
+                <hr><div data-id="namespace-section" id="RefDocGen"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen-collapse" aria-expanded="false" aria-controls="RefDocGen-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocGenerator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DocGenerator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for generating the reference documentation using the provided DLL and XML doc comments file.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.OtherLanguageConfiguration.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">OtherLanguageConfiguration</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            This class shows an example empty configuration of an 'other' language.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Program.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">Program</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Program class, containing main method
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.AssemblyAnalysis"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.AssemblyAnalysis.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.AssemblyAnalysis</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.AssemblyAnalysis-collapse" aria-expanded="false" aria-controls="RefDocGen.AssemblyAnalysis-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.AssemblyAnalysis-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.AssemblyDataConfiguration.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AssemblyDataConfiguration</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc"></td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.AssemblyTypeExtractor.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AssemblyTypeExtractor</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for extracting type information from a selected assembly.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberInheritanceMode.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberInheritanceMode</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Defines the inheritance rules for members.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.ObjectTypeDataBuilder.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ObjectTypeDataBuilder</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for building an instance of &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Types.Concrete.ObjectTypeData.html"&gt;ObjectTypeData&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.AssemblyAnalysis.Extensions"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.AssemblyAnalysis.Extensions.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.AssemblyAnalysis.Extensions</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.AssemblyAnalysis.Extensions-collapse" aria-expanded="false" aria-controls="RefDocGen.AssemblyAnalysis.Extensions-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.AssemblyAnalysis.Extensions-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.Extensions.CustomAttributeDataExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">CustomAttributeDataExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.reflection.customattributedata"&gt;CustomAttributeData&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.Extensions.EnumerableMemberDataExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumerableMemberDataExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for enumerable of member types.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.Extensions.MemberInfoExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberInfoExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo"&gt;MemberInfo&lt;/a&gt; class and its subclasses.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.Extensions.TypeExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.type"&gt;Type&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.AssemblyAnalysis.MemberCreators"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.AssemblyAnalysis.MemberCreators</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.AssemblyAnalysis.MemberCreators-collapse" aria-expanded="false" aria-controls="RefDocGen.AssemblyAnalysis.MemberCreators-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.AssemblyAnalysis.MemberCreators-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.ConstructorDataCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ConstructorDataCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Members.Concrete.ConstructorData.html"&gt;ConstructorData&lt;/a&gt; instances.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.EventDataCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EventDataCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Members.Concrete.EventData.html"&gt;EventData&lt;/a&gt; instances.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.FieldDataCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">FieldDataCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Members.Concrete.FieldData.html"&gt;FieldData&lt;/a&gt; instances.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.IndexerDataCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">IndexerDataCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Members.Concrete.IndexerData.html"&gt;IndexerData&lt;/a&gt; instances.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.MemberCreatorHelper.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberCreatorHelper</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing helper methods related to creating type and member data objects.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.MethodDataCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MethodDataCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Members.Concrete.MethodData.html"&gt;MethodData&lt;/a&gt; instances.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.OperatorDataCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">OperatorDataCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Members.Concrete.OperatorData.html"&gt;OperatorData&lt;/a&gt; instances.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.AssemblyAnalysis.MemberCreators.PropertyDataCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">PropertyDataCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Members.Concrete.PropertyData.html"&gt;PropertyData&lt;/a&gt; instances.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.AccessModifier.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">AccessModifier</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents access modifier of a member.
+            &lt;div class="refdocgen-paragraph"&gt;Note that the values are sorted from the most restrictive to the least restrictive.&lt;/div&gt;
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.AccessModifierExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AccessModifierExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.AccessModifier.html"&gt;AccessModifier&lt;/a&gt; enum.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.AssemblyData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AssemblyData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a .NET assembly.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.CodeElementKind.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">CodeElementKind</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents kind of a code element.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.NamespaceData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">NamespaceData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a namespace together with the types contained in it.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.SpecialTypeConstraint.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">SpecialTypeConstraint</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents special constraints that can be applied to generic type parameters.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Members"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Members.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Members</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Members-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Members-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Members-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.OperatorKind.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">OperatorKind</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the kind of an operator.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Members.Abstract"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Members.Abstract</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Members.Abstract-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Members.Abstract-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Members.Abstract-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.ICallableMemberData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ICallableMemberData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+             Represents data of a callable type member (such as a method, property or an event).
+            
+             &lt;div class="refdocgen-paragraph"&gt;
+             Note that these members can typically be declared in an interface or possibly overriden by child classes.
+             &lt;/div&gt;
+             &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IConstructorData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IConstructorData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a constructor.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IEventData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IEventData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of an event.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IFieldData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IFieldData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a field.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IIndexerData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IIndexerData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of an indexer.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IMemberData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IMemberData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a type member (such as a field, property or a method).
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IMethodData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IMethodData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a method.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IOperatorData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IOperatorData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of an operator.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IParameterData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IParameterData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a method/constructor parameter.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IParameterizedMemberData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IParameterizedMemberData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a type member that may have parameters (such as a method, constructor or indexer).
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IPropertyData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IPropertyData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a property.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.IValueMemberData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IValueMemberData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a type member storing a value; i.e. a field or a property.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Members.Abstract.Enum"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.Enum.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Members.Abstract.Enum</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Members.Abstract.Enum-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Members.Abstract.Enum-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Members.Abstract.Enum-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Abstract.Enum.IEnumMemberData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IEnumMemberData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of an enum member.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Members.Concrete"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Members.Concrete</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Members.Concrete-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Members.Concrete-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Members.Concrete-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.ConstructorData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ConstructorData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of a constructor.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.EventData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EventData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of an event.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.FieldData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">FieldData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of a field.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.IndexerData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">IndexerData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of an indexer.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.MemberData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of a type member.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.MethodData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MethodData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of a method.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.MethodLikeMemberData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MethodLikeMemberData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a method-like type member (such as a method or a constructor).
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.OperatorData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">OperatorData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of an operator.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.ParameterData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ParameterData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of a method/constructor parameter.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.PropertyData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">PropertyData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of a property.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Members.Concrete.Enum"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.Enum.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Members.Concrete.Enum</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Members.Concrete.Enum-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Members.Concrete.Enum-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Members.Concrete.Enum-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Concrete.Enum.EnumMemberData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumMemberData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of an enum member.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Members.Tools"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Members.Tools.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Members.Tools</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Members.Tools-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Members.Tools-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Members.Tools-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Tools.ExplicitInterfaceType.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ExplicitInterfaceType</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing methods related to explicitly implmented members.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Tools.MemberId.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberId</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class providing methods for getting IDs of the selected members.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Members.Tools.MemberName.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberName</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class providing methods for getting names of the selected members.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Shared"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Shared.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Shared</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Shared-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Shared-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Shared-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Shared.AccessModifierHelper.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AccessModifierHelper</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing helper methods for &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.AccessModifier.html"&gt;AccessModifier&lt;/a&gt; enum.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Shared.EnumerableTypeDataExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumerableTypeDataExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for enumerable of typeData.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Shared.TypeExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.type"&gt;Type&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.TypeRegistry"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.TypeRegistry.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.TypeRegistry</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.TypeRegistry-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.TypeRegistry-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.TypeRegistry-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.TypeRegistry.ITypeRegistry.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ITypeRegistry</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a registry of the declared types.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.TypeRegistry.TypeRegistry.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeRegistry</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a registry of the declared types.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.ObjectTypeKind.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">ObjectTypeKind</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents kind of an object type.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Abstract"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Abstract</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Abstract-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Abstract-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Abstract-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.IObjectTypeData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IObjectTypeData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a value, reference or interface type; including its members.
+            &lt;div class="refdocgen-paragraph"&gt;
+            Note: This interface doesn't represent enum types - see &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Types.Abstract.Enum.IEnumTypeData.html"&gt;IEnumTypeData&lt;/a&gt;.
+            &lt;/div&gt;
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.ITypeDeclaration.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ITypeDeclaration</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a type declared in any of the assemblies analyzed.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.ITypeParameterData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ITypeParameterData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents declaration of a generic type parameter.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Abstract.Attribute"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Attribute.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Abstract.Attribute</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Abstract.Attribute-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Abstract.Attribute-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Abstract.Attribute-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Attribute.IAttributeData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IAttributeData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents an attribute assigned to a type or member.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Attribute.NamedAttributeArgument.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">struct</span>
+                <span></span>
+
+                <span class="csharp-lang">NamedAttributeArgument</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a named argument of an attribute.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Abstract.Delegate"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Delegate.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Abstract.Delegate</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Abstract.Delegate-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Abstract.Delegate-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Abstract.Delegate-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Delegate.IDelegateTypeData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IDelegateTypeData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of a delegate.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Abstract.Enum"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Enum.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Abstract.Enum</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Abstract.Enum-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Abstract.Enum-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Abstract.Enum-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Enum.IEnumTypeData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IEnumTypeData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data of an enum type.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Abstract.Exception"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Exception.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Abstract.Exception</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Abstract.Exception-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Abstract.Exception-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Abstract.Exception-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.Exception.IExceptionDocumentation.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IExceptionDocumentation</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a user-documented exception (using the &lt;code class="refdocgen-inline-code"&gt;exception&lt;/code&gt; tag) that can be thrown by a member.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Abstract.TypeName"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.TypeName.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Abstract.TypeName</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Abstract.TypeName-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Abstract.TypeName-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Abstract.TypeName-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.TypeName.ITypeNameBaseData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ITypeNameBaseData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents name-related data of any type, including its name, namespace.
+            &lt;div class="refdocgen-paragraph"&gt;
+            Doesn't include any type parameters nor member data (such as fields, methods, etc.)
+            &lt;/div&gt;
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Abstract.TypeName.ITypeNameData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ITypeNameData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents name-related data of any type, including its name, namespace, and generic parameters (if present).
+            &lt;div class="refdocgen-paragraph"&gt;
+            Doesn't include any type member data (such as fields, methods, etc.)
+            &lt;/div&gt;
+            &lt;div class="refdocgen-paragraph"&gt;
+            Note that this interface can represent also 'void', even though it's technically not a type.
+            &lt;/div&gt;
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Concrete"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Concrete</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Concrete-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Concrete-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Concrete-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.ObjectTypeData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ObjectTypeData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of a value, reference or interface type, including its members.
+            &lt;div class="refdocgen-paragraph"&gt;
+            Typically, only the types contained in the assemblies we analyze, are represented by this class.
+            &lt;/div&gt;
+            &lt;div class="refdocgen-paragraph"&gt;
+            Note: This class doesn't represent enum types - see &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Types.Concrete.Enum.EnumTypeData.html"&gt;EnumTypeData&lt;/a&gt;.
+            &lt;/div&gt;
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.TypeDeclaration.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeDeclaration</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a type declared in any of the assemblies analyzed.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.TypeParameterData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeParameterData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing the declaration of a generic type parameter.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Concrete.Attribute"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.Attribute.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Concrete.Attribute</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Concrete.Attribute-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Concrete.Attribute-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Concrete.Attribute-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.Attribute.AttributeData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AttributeData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents an attribute assigned to a type or member.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Concrete.Delegate"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.Delegate.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Concrete.Delegate</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Concrete.Delegate-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Concrete.Delegate-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Concrete.Delegate-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.Delegate.DelegateTypeData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DelegateTypeData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of a delegate.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Concrete.Enum"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.Enum.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Concrete.Enum</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Concrete.Enum-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Concrete.Enum-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Concrete.Enum-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.Enum.EnumTypeData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumTypeData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing data of an enum, including its members.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Concrete.Exception"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.Exception.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Concrete.Exception</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Concrete.Exception-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Concrete.Exception-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Concrete.Exception-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.Exception.ExceptionDocumentation.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ExceptionDocumentation</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing a user-documented exception (using the 'exception' tag) that can be thrown by a member.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Concrete.TypeName"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.TypeName.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Concrete.TypeName</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Concrete.TypeName-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Concrete.TypeName-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Concrete.TypeName-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.TypeName.GenericTypeParameterNameData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">GenericTypeParameterNameData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing name-related data of a generic parameter.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.TypeName.TypeNameBaseData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeNameBaseData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing name-related data of any type, including its name, namespace.
+            &lt;div class="refdocgen-paragraph"&gt;
+            Doesn't include any type parameters nor member data (such as fields, methods, etc.)
+            &lt;/div&gt;
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Concrete.TypeName.TypeNameData.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeNameData</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class representing name-related data of a type, including its name, namespace, and generic parameters (if present).
+            &lt;div class="refdocgen-paragraph"&gt;
+            Doesn't include any type member data (such as fields, methods, etc.)
+            &lt;/div&gt;
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.CodeElements.Types.Tools"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.CodeElements.Types.Tools.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.CodeElements.Types.Tools</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.CodeElements.Types.Tools-collapse" aria-expanded="false" aria-controls="RefDocGen.CodeElements.Types.Tools-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.CodeElements.Types.Tools-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.CodeElements.Types.Tools.TypeId.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeId</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class providing methods for getting IDs of the declared types.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.DocExtraction"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.DocExtraction.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.DocExtraction</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.DocExtraction-collapse" aria-expanded="false" aria-controls="RefDocGen.DocExtraction-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.DocExtraction-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.DocCommentExtractor.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DocCommentExtractor</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for extracting the XML documentation comments and adding them to the type data
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.DocExtraction.Handlers.Members"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.DocExtraction.Handlers.Members</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.DocExtraction.Handlers.Members-collapse" aria-expanded="false" aria-controls="RefDocGen.DocExtraction.Handlers.Members-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.DocExtraction.Handlers.Members-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.ConstructorDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ConstructorDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding constructors.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.EventDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EventDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding events.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.FieldDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">FieldDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding fields.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.IMemberDocHandler`1.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IMemberDocHandler&lt;TType&gt;</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Interface used for handling and adding XML doc comments to the corresponding type members.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.IndexerDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">IndexerDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding indexers.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.MemberDocHandler`2.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberDocHandler&lt;TType, TMember&gt;</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Abstract class responsible for handling and adding XML doc comments to the corresponding type members.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.MethodDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MethodDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding methods.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.MethodLikeMemberDocHandler`1.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MethodLikeMemberDocHandler&lt;T&gt;</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Abstract class responsible for handling and adding XML doc comments to the corresponding method-like type members.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.OperatorDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">OperatorDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding operators.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.PropertyDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">PropertyDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding properties.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.DocExtraction.Handlers.Members.Enum"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.Enum.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.DocExtraction.Handlers.Members.Enum</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.DocExtraction.Handlers.Members.Enum-collapse" aria-expanded="false" aria-controls="RefDocGen.DocExtraction.Handlers.Members.Enum-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.DocExtraction.Handlers.Members.Enum-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Members.Enum.EnumMemberDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumMemberDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding enum members.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.DocExtraction.Handlers.Tools"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Tools.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.DocExtraction.Handlers.Tools</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.DocExtraction.Handlers.Tools-collapse" aria-expanded="false" aria-controls="RefDocGen.DocExtraction.Handlers.Tools-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.DocExtraction.Handlers.Tools-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Tools.ExceptionDocHelper.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ExceptionDocHelper</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Helper class used for documenting member exceptions.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Tools.ParameterDocHelper.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ParameterDocHelper</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Helper class used for documenting parameters.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Tools.TypeParameterDocHelper.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeParameterDocHelper</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Helper class used for documenting type parameters.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.DocExtraction.Handlers.Types"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Types.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.DocExtraction.Handlers.Types</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.DocExtraction.Handlers.Types-collapse" aria-expanded="false" aria-controls="RefDocGen.DocExtraction.Handlers.Types-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.DocExtraction.Handlers.Types-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Types.DelegateTypeDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DelegateTypeDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding delegate types.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Handlers.Types.TypeDocHandler.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeDocHandler</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling and adding XML doc comments to the corresponding types.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.DocExtraction.InheritDoc"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.DocExtraction.InheritDoc.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.DocExtraction.InheritDoc</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.DocExtraction.InheritDoc-collapse" aria-expanded="false" aria-controls="RefDocGen.DocExtraction.InheritDoc-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.DocExtraction.InheritDoc-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.InheritDoc.CrefInheritDocResolver.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">CrefInheritDocResolver</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling the 'inheritdoc' comments with 'cref' attribute and replacing them with the actual documentation.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.InheritDoc.InheritDocResolver`1.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">InheritDocResolver&lt;TNode&gt;</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Generic base class responsible for handling the 'inheritdoc' comments and replacing them with the actual documentation
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.InheritDoc.MemberInheritDocResolver.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberInheritDocResolver</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling the 'inheritdoc' comments provided to type members and replacing them with the actual documentation.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.InheritDoc.TypeInheritDocResolver.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeInheritDocResolver</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling the 'inheritdoc' comments provided to types and replacing them with the actual documentation.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.DocExtraction.Tools"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.DocExtraction.Tools.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.DocExtraction.Tools</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.DocExtraction.Tools-collapse" aria-expanded="false" aria-controls="RefDocGen.DocExtraction.Tools-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.DocExtraction.Tools-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Tools.CodeElementId.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">CodeElementId</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing constants representing the code element identifiers in the XML documentation file.
+            &lt;div class="refdocgen-paragraph"&gt;
+            See also &lt;a class="refdocgen-see-href" href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/#id-strings"&gt;https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/xmldoc/#id-strings&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Tools.InheritDocKind.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">InheritDocKind</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents kind of the inheritdoc doc comment.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Tools.MemberSignatureParser.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MemberSignatureParser</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing methods for parsing type member signatures.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.DocExtraction.Tools.XElementExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">XElementExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xelement"&gt;System.Xml.Linq.XElement&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.ITemplateGenerator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ITemplateGenerator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Defines methods for generating templates using the &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.TypeRegistry.ITypeRegistry.html"&gt;ITypeRegistry&lt;/a&gt; data.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.ITemplateModelWithId.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ITemplateModelWithId</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents any template model that can be identified by its ID.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Default"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Default.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Default</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Default-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Default-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Default-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Default.DefaultTemplateGenerator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DefaultTemplateGenerator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class used for generating default Razor templates.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.RazorTemplateGenerator`8.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">RazorTemplateGenerator&lt;TObjectTypePageTemplate, TDelegatePageTemplate, TEnumPageTemplate, TNamespacePageTemplate, TAssemblyPageTemplate, TApiPageTemplate, TStaticPageTemplate, TSearchPageTemplate&gt;</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for generating the Razor templates and populating them with the type data.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.DocComments.Html"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocComments.Html.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.DocComments.Html</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.DocComments.Html-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.DocComments.Html-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.DocComments.Html-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocComments.Html.DocCommentHtmlConfiguration.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DocCommentHtmlConfiguration</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Default configuration for transforming the XML documentation elements into their HTML representations.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocComments.Html.DocCommentTransformer.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DocCommentTransformer</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for transforming the XML doc comments into HTML.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocComments.Html.IDocCommentHtmlConfiguration.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IDocCommentHtmlConfiguration</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Defines the HTML representations for the XML doc comment elements.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocComments.Html.IDocCommentTransformer.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">IDocCommentTransformer</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Provides methods for transforming the XML doc comments into HTML.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocComments.Html.ListType.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">ListType</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Type of the list.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.DocVersioning"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocVersioning.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.DocVersioning</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.DocVersioning-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.DocVersioning-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.DocVersioning-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocVersioning.DocVersion.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DocVersion</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a certain version of the documentation.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.DocVersioning.DocVersionManager.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DocVersionManager</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for managing different versions of the documentation.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.Languages"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Languages.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.Languages</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.Languages-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.Languages-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.Languages-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Languages.CSharpLanguageConfiguration.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">CSharpLanguageConfiguration</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Provides syntax-related data the C# language.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Languages.ILanguageConfiguration.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ILanguageConfiguration</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Provides syntax-related data a programming language.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Languages.ILanguageConfigurationExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ILanguageConfigurationExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc"></td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Languages.LanguageSpecificData`1.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">LanguageSpecificData&lt;T&gt;</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents data stored in multiple programming languages (e.g., C#, VB.NET, F#).
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Languages.PropertyModifiers.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">struct</span>
+                <span></span>
+
+                <span class="csharp-lang">PropertyModifiers</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a set of property modifiers.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.StaticPages"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.StaticPages.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.StaticPages</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.StaticPages-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.StaticPages-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.StaticPages-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.StaticPages.StaticPage.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">StaticPage</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a static page created by user.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.StaticPages.StaticPageProcessor.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">StaticPageProcessor</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for handling all user-provided static pages.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModelCreators"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModelCreators</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModelCreators-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModelCreators-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModelCreators-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.AssemblyTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AssemblyTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating template models representing the assemblies of a program.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.BaseTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">BaseTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Base class containing functionality shared between all TM Creators.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.DelegateTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DelegateTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating template models representing the individual delegates.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.EnumTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating template models representing the individual enums.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.NamespaceTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">NamespaceTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating template models representing the namespaces of a program.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.ObjectTypeTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ObjectTypeTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating template models representing the individual object types.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.SearchResultTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">SearchResultTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating template models representing the search result template models.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.TopMenuTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TopMenuTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for creating &lt;a class="refdocgen-see-cref" href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu.TopMenuDataTM.html"&gt;TopMenuDataTM&lt;/a&gt; object, representing the data in the top menu.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.TypeTMCreator.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeTMCreator</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Base class responsible for creating template models representing any types.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.Tools"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.Tools.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.Tools</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.Tools-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.Tools-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.Tools-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModelCreators.Tools.EnumerableMemberDataExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumerableMemberDataExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Contains extension methods for an enumerable of &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Members.Abstract.IMemberData.html"&gt;IMemberData&lt;/a&gt;.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Assemblies"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Assemblies.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModels.Assemblies</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModels.Assemblies-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModels.Assemblies-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Assemblies-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Assemblies.AssemblyTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AssemblyTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents template model for an assembly.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Language"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Language.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModels.Language</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModels.Language-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModels.Language-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Language-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Language.LanguageTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">LanguageTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Template model representing a language used for displaying syntax.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Links"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Links.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModels.Links</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModels.Links-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModels.Links-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Links-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Links.CodeLinkTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">CodeLinkTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc"></td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Links.GenericTypeLinkTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">GenericTypeLinkTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc"></td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Members"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModels.Members</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModels.Members-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModels.Members-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Members-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.ConstructorTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ConstructorTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model of a constructor.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.EnumMemberTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumMemberTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for an enum member.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.EventTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EventTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for an event.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.FieldTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">FieldTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a field.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.IndexerTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">IndexerTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for an indexer.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.MethodTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MethodTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a method.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.OperatorTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">OperatorTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a operator.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.ParameterTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ParameterTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a method parameter.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Members.PropertyTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">PropertyTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a property.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu.MenuFolderTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MenuFolderTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a folder in the top menu.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu.MenuPageLinkTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">MenuPageLinkTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents a page link in the top menu.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Menu.TopMenuDataTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TopMenuDataTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Template model representing the page links and folders contained in the top menu.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Namespaces"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Namespaces.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModels.Namespaces</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModels.Namespaces-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModels.Namespaces-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Namespaces-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Namespaces.NamespaceTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">NamespaceTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a namespace.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Types"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateModels.Types</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateModels.Types-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateModels.Types-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateModels.Types-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.AttributeTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AttributeTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for an attribute assigned to a type or member.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.DelegateTypeTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DelegateTypeTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a delegate.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.EnumTypeTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">EnumTypeTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for an enum, including its members.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.ExceptionTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ExceptionTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a user-documented exception (using the &lt;code class="refdocgen-inline-code"&gt;exception&lt;/code&gt; XML tag).
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.ITypeDeclarationNameTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span></span>
+
+                <span class="csharp-lang">ITypeDeclarationNameTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a type declaration name.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.NamedAttributeArgumentTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">NamedAttributeArgumentTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for an attribute's named argument.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.ObjectTypeTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ObjectTypeTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a type.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.SearchResultTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">SearchResultTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Template model representing a search result displayed at the &lt;code class="refdocgen-inline-code"&gt;search&lt;/code&gt; page.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.TypeNameTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeNameTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a type, including its name and other data.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateModels.Types.TypeParameterTM.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeParameterTM</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Represents the template model for a generic type parameter declaration.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.TemplateTools"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateTools.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.TemplateTools</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.TemplateTools-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.TemplateTools-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.TemplateTools-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateTools.LanguageSpecificComponent.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">LanguageSpecificComponent</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Enum representing the language specific components.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.TemplateTools.UrlHelper.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">UrlHelper</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Helper class for URL manipulation, specifically for generating relative URIs.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.Tools"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.Tools</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.Tools-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.Tools-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.Tools-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.CSharpLiteralValueFormatter.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">CSharpLiteralValueFormatter</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for formatting literal values to its C# format.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.SpecialConstraintExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">SpecialConstraintExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.SpecialTypeConstraint.html"&gt;SpecialTypeConstraint&lt;/a&gt; enum.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.TypeKindName.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeKindName</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Provides names of the individual type kinds.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.TypeTools.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeTools</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Contains additoinal tools related to types.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.TypeUrlResolver.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeUrlResolver</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class responsible for resolving URL of the type's documentation page.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.XElementExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">XElementExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Provides extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.xml.linq.xelement"&gt;System.Xml.Linq.XElement&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.AbstractKeyword.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AbstractKeyword</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Static class containing additional methods related to the 'abstract' keyword.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.AccessModifierExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AccessModifierExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.AccessModifier.html"&gt;AccessModifier&lt;/a&gt; enum.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.Keyword.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">enum</span>
+                <span></span>
+
+                <span class="csharp-lang">Keyword</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Enum representing various C# keywords and modifiers
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.KeywordExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">KeywordExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            A class containing extension methods for &lt;a class="refdocgen-see-cref" href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.Keyword.html"&gt;Keyword&lt;/a&gt; enum.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.ListExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">ListExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1"&gt;List&amp;lt;T&amp;gt;&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.RefKeyword.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">RefKeyword</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Static class containing additional methods related to the 'ref' keyword.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.SealedKeyword.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">SealedKeyword</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Static class containing additional methods related to the 'sealed' keyword.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.StaticKeyword.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">StaticKeyword</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Static class containing additional methods related to the 'static' keyword.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.TypeKindExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeKindExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="./RefDocGen.CodeElements.Types.ObjectTypeKind.html"&gt;ObjectTypeKind&lt;/a&gt; enum.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Keywords.CSharp.VirtualKeyword.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">VirtualKeyword</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Static class containing additional methods related to the 'virtual' keyword.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.TemplateGenerators.Shared.Tools.Names"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Names.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.TemplateGenerators.Shared.Tools.Names</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.TemplateGenerators.Shared.Tools.Names-collapse" aria-expanded="false" aria-controls="RefDocGen.TemplateGenerators.Shared.Tools.Names-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.TemplateGenerators.Shared.Tools.Names-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Names.AttributeName.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">AttributeName</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Static class used for retrieving names of attribute names.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Names.CSharpOperatorName.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">CSharpOperatorName</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Static class used for retrieving operator names in C# format.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.TemplateGenerators.Shared.Tools.Names.CSharpTypeName.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">CSharpTypeName</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Static class used for retrieving type names in C# format.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.Tools"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.Tools.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.Tools</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.Tools-collapse" aria-expanded="false" aria-controls="RefDocGen.Tools-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.Tools-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Tools.DictionaryExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DictionaryExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods related to dictionaries.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Tools.DirectoryInfoExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">DirectoryInfoExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.io.directoryinfo"&gt;DirectoryInfo&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Tools.IEnumerableExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">IEnumerableExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1"&gt;IEnumerable&amp;lt;T&amp;gt;&lt;/a&gt; interface.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Tools.StringExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">StringExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.string"&gt;string&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Tools.TypeExtensions.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">TypeExtensions</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing extension methods for the &lt;a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.type"&gt;Type&lt;/a&gt; class.
+            &lt;/div&gt;</td></tr></tbody></table></div></div><div data-id="namespace-section" id="RefDocGen.Tools.Xml"><div class="d-flex justify-content-between align-items-center"><h1 class="display-6" data-id="namespace-name"><samp><a href="./RefDocGen.Tools.Xml.html" class="refdocgen-link-primary"><span class="refdocgen-text-tertiary">namespace</span>
+                    <span>RefDocGen.Tools.Xml</span></a></samp></h1>
+
+        <button class="btn" data-bs-toggle="collapse" data-bs-target="#RefDocGen.Tools.Xml-collapse" aria-expanded="false" aria-controls="RefDocGen.Tools.Xml-collapse"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path></svg></button></div>
+
+    <hr>
+
+    <div class="collapse show multi-collapse" id="RefDocGen.Tools.Xml-collapse"><table class="table"><tbody data-id="namespace-types"><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Tools.Xml.XmlDocElements.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">XmlDocElements</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Provides the selected XML doc comment nodes.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Tools.Xml.XmlDocIdentifiers.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">XmlDocIdentifiers</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Contains constants representing XML element and attribute names found in XML doc comments.
+            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./RefDocGen.Tools.Xml.XPathTools.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span></span>
+
+                <span class="csharp-lang">XPathTools</span><span class="other-lang"></span></a></samp></td>
+    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;
+            Class containing helper methods related to XPath
+            &lt;/div&gt;</td></tr></tbody></table></div></div></div><nav class="navbar fixed-bottom menu-bg"><div class="container"><div class="dropup"><button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">v1.0</button>
+            <div id="current-version">v1.0</div>
+            <div id="version-list">["v1.0","v1.1"]</div>
+            <ul class="dropdown-menu" id="version-selector" data-id="version-selector"></ul></div></div></nav><script src="../Static/bootstrap-5.3.5-dist.bundle.min.js"></script>
+
+    
+    <script src="../Static/script.js"></script></body></html>
