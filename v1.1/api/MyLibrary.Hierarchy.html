@@ -5,14 +5,62 @@
     <title>Reference documentation</title>
 
     <script>
-        const savedTheme = localStorage.getItem('refdocgen-theme') || "light"; // get the saved theme
-        document.documentElement.setAttribute('data-bs-theme', savedTheme); // set the 'data-bs-theme' attribute
 
+        // use IIFE in order to avoid polluting global context with functions & variables
+        // https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+        (function() {
+            const isLocalFile = location.protocol === "file:";
+            const defaultTheme = "dark";
+            const defaultLang = "csharp-lang";
 
+            if(isLocalFile){
+                const urlParams = new URLSearchParams(window.location.search);
+
+                let redirect = false;
+
+                // set 'theme' URL param if not found
+                if(!urlParams.has("theme")){
+                    urlParams.set("theme", defaultTheme);
+                    redirect = true;
+                }
+
+                // set 'lang' URL param if not found
+                if(!urlParams.has("lang")){
+                    urlParams.set("lang", defaultLang);
+                    redirect = true;
+                }
+
+                // redirect, if some of the URL parameters are missing
+                if(redirect){
+                    const newUrl = new URL(window.location.href);
+                    newUrl.search = urlParams.toString();
+
+                    window.location.href = newUrl;
+                }
+                else {
+                    document.documentElement.setAttribute("data-bs-theme", urlParams.get("theme")); // set the 'data-bs-theme' attribute
+                    document.documentElement.setAttribute("data-language", urlParams.get("lang")); // set the 'data-language' attribute
+                }
+            }
+            else { // no local file -> use localStorage
+                if (!localStorage.getItem("refdocgen-theme")) { 
+                    localStorage.setItem("refdocgen-theme", defaultTheme);
+                }
+
+                if (!localStorage.getItem("refdocgen-language")) {
+                    localStorage.setItem("refdocgen-language", defaultLang);
+                }
+
+                document.documentElement.setAttribute("data-bs-theme", localStorage.getItem("refdocgen-theme")); // set the 'data-bs-theme' attribute
+                document.documentElement.setAttribute("data-language", localStorage.getItem("refdocgen-language")); // set the 'data-language' attribute
+            }
+        })();
     </script>
 
     
-    <link href="../Static/styles.css" rel="stylesheet" /></head>
+    <link href="../Static/styles.css" rel="stylesheet" /><style>html[data-language="csharp-lang"] .csharp-lang { display: inline; }
+html[data-language="other-lang"] .other-lang { display: inline; }
+</style></head>
 
 <body><nav class="navbar navbar-expand-lg sticky-top menu-bg"><div class="container"><a class="navbar-brand" href="../index.html">Project name</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -28,29 +76,54 @@
 
     <div class="container my-4" data-id="page-body"><h1 class="display-4" data-id="namespace-title"><samp><span class="refdocgen-text-tertiary">namespace</span>
                         <span class="refdocgen-text-primary">MyLibrary.Hierarchy</span></samp></h1>
-                <hr><h2 class="display-5">Classes</h2>
-                    <table class="table" data-id="namespace-classes"><tbody><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.Child.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+
+                <h6><samp data-id="type-assembly"><a href="MyLibrary-DLL.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">assembly</span>
+            <span class="refdocgen-text-secondary">MyLibrary</span></a></samp></h6>
+
+                <hr><h2 class="display-5 my-2">Classes</h2>
+                    <div data-id="namespace-classes"><div class="row align-items-center mx-2" data-id="type-row-element"><div class="col-md-6" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.Child.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
                 <span></span>
 
-                <span class="csharp-lang">Child</span><span class="other-lang"></span></a></samp></td>
-    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;&#xD;&#xA;            Parent class.&#xD;&#xA;            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.ChildChild.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span class="csharp-lang not-visible">Child</span><span class="other-lang not-visible"></span></a></samp></div>
+    <div class="col-md-6 text-body-secondary fst-italic text-truncate" data-id="type-row-doc">
+            Parent class.
+            </div></div>
+<hr class="my-2"><div class="row align-items-center mx-2" data-id="type-row-element"><div class="col-md-6" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.ChildChild.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
                 <span></span>
 
-                <span class="csharp-lang">ChildChild</span><span class="other-lang"></span></a></samp></td>
-    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;&#xD;&#xA;            IChild Print the object.&#xD;&#xA;            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.ChildChildChild.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span class="csharp-lang not-visible">ChildChild</span><span class="other-lang not-visible"></span></a></samp></div>
+    <div class="col-md-6 text-body-secondary fst-italic text-truncate" data-id="type-row-doc">
+            IChild Print the object.
+            </div></div>
+<hr class="my-2"><div class="row align-items-center mx-2" data-id="type-row-element"><div class="col-md-6" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.ChildChildChild.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
                 <span></span>
 
-                <span class="csharp-lang">ChildChildChild</span><span class="other-lang"></span></a></samp></td>
-    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;&#xD;&#xA;            Before parent.&#xD;&#xA;            &#xD;&#xA;            &lt;div&gt;&#xD;&#xA;            Parent class.&#xD;&#xA;            &lt;/div&gt;&#xD;&#xA;         &#xD;&#xA;            After parent.&#xD;&#xA;            &lt;/div&gt;</td></tr><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.Parent.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
+                <span class="csharp-lang not-visible">ChildChildChild</span><span class="other-lang not-visible"></span></a></samp></div>
+    <div class="col-md-6 text-body-secondary fst-italic text-truncate" data-id="type-row-doc">
+            Before parent.
+            
+            
+            Parent class.
+            
+         
+            After parent.
+            </div></div>
+<hr class="my-2"><div class="row align-items-center mx-2" data-id="type-row-element"><div class="col-md-6" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.Parent.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">class</span>
                 <span></span>
 
-                <span class="csharp-lang">Parent</span><span class="other-lang"></span></a></samp></td>
-    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;&#xD;&#xA;            Parent class.&#xD;&#xA;            &lt;/div&gt;</td></tr></tbody></table><h2 class="display-5">Interfaces</h2>
-                    <table class="table" data-id="namespace-interfaces"><tbody><tr data-id="type-row-element"><td class="w-50" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.IChild.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
+                <span class="csharp-lang not-visible">Parent</span><span class="other-lang not-visible"></span></a></samp></div>
+    <div class="col-md-6 text-body-secondary fst-italic text-truncate" data-id="type-row-doc">
+            Parent class.
+            </div></div>
+<hr class="my-2"></div><h2 class="display-5 my-2">Interfaces</h2>
+                    <div data-id="namespace-interfaces"><div class="row align-items-center mx-2" data-id="type-row-element"><div class="col-md-6" data-id="type-row-name"><samp><a href="./MyLibrary.Hierarchy.IChild.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">interface</span>
                 <span></span>
 
-                <span class="csharp-lang">IChild</span><span class="other-lang"></span></a></samp></td>
-    <td class="text-body-secondary fst-italic" data-id="type-row-doc">&lt;div&gt;&#xD;&#xA;            IChild interface.&#xD;&#xA;            &lt;/div&gt;</td></tr></tbody></table></div><nav class="navbar fixed-bottom menu-bg"><div class="container"><div class="dropup"><button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">v1.1</button>
+                <span class="csharp-lang not-visible">IChild</span><span class="other-lang not-visible"></span></a></samp></div>
+    <div class="col-md-6 text-body-secondary fst-italic text-truncate" data-id="type-row-doc">
+            IChild interface.
+            </div></div>
+<hr class="my-2"></div></div><nav class="navbar fixed-bottom menu-bg"><div class="container"><div class="dropup"><button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">v1.1</button>
             <div id="current-version">v1.1</div>
             <div id="version-list">[&quot;v1.0&quot;,&quot;v1.1&quot;]</div>
             <ul class="dropdown-menu" id="version-selector" data-id="version-selector"></ul></div></div></nav><script src="../Static/bootstrap-5.3.5-dist.bundle.min.js"></script>

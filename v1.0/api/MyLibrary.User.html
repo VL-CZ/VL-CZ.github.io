@@ -4,14 +4,62 @@
     <title>Reference documentation</title>
 
     <script>
-        const savedTheme = localStorage.getItem('refdocgen-theme') || "light"; // get the saved theme
-        document.documentElement.setAttribute('data-bs-theme', savedTheme); // set the 'data-bs-theme' attribute
 
+        // use IIFE in order to avoid polluting global context with functions & variables
+        // https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+        (function() {
+            const isLocalFile = location.protocol === "file:";
+            const defaultTheme = "dark";
+            const defaultLang = "csharp-lang";
 
+            if(isLocalFile){
+                const urlParams = new URLSearchParams(window.location.search);
+
+                let redirect = false;
+
+                // set 'theme' URL param if not found
+                if(!urlParams.has("theme")){
+                    urlParams.set("theme", defaultTheme);
+                    redirect = true;
+                }
+
+                // set 'lang' URL param if not found
+                if(!urlParams.has("lang")){
+                    urlParams.set("lang", defaultLang);
+                    redirect = true;
+                }
+
+                // redirect, if some of the URL parameters are missing
+                if(redirect){
+                    const newUrl = new URL(window.location.href);
+                    newUrl.search = urlParams.toString();
+
+                    window.location.href = newUrl;
+                }
+                else {
+                    document.documentElement.setAttribute("data-bs-theme", urlParams.get("theme")); // set the 'data-bs-theme' attribute
+                    document.documentElement.setAttribute("data-language", urlParams.get("lang")); // set the 'data-language' attribute
+                }
+            }
+            else { // no local file -> use localStorage
+                if (!localStorage.getItem("refdocgen-theme")) { 
+                    localStorage.setItem("refdocgen-theme", defaultTheme);
+                }
+
+                if (!localStorage.getItem("refdocgen-language")) {
+                    localStorage.setItem("refdocgen-language", defaultLang);
+                }
+
+                document.documentElement.setAttribute("data-bs-theme", localStorage.getItem("refdocgen-theme")); // set the 'data-bs-theme' attribute
+                document.documentElement.setAttribute("data-language", localStorage.getItem("refdocgen-language")); // set the 'data-language' attribute
+            }
+        })();
     </script>
 
     
-    <link href="../Static/styles.css" rel="stylesheet"></head>
+    <link href="../Static/styles.css" rel="stylesheet"><style>html[data-language="csharp-lang"] .csharp-lang { display: inline; }
+html[data-language="other-lang"] .other-lang { display: inline; }
+</style></head>
 
 <body><nav class="navbar navbar-expand-lg sticky-top menu-bg"><div class="container"><a class="navbar-brand" href="../index.html">Project name</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -25,10 +73,10 @@
                 
                 <li class="nav-item" id="theme-switcher"><button class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16"><path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path></svg></button></li></ul></div></div></nav>
 
-    <div class="container my-4" data-id="page-body"><div data-id="declared-type-data"><h1 class="display-4" data-id="type-name-title"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public class</span>
-<span class="refdocgen-text-primary">User</span></span><span class="other-lang"></span></samp></h1>
+    <div class="container my-4" data-id="page-body"><div data-id="declared-type-data"><h1 class="display-4" data-id="type-name-title"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public class</span>
+<span class="refdocgen-text-primary">User</span></span><span class="other-lang not-visible"></span></samp></h1>
 
-                    <span class="csharp-lang"></span><span class="other-lang"></span>
+                    
 
                     <h6><samp data-id="type-assembly"><a href="MyLibrary-DLL.html" class="refdocgen-link-secondary"><span class="refdocgen-text-tertiary">assembly</span>
             <span class="refdocgen-text-secondary">MyLibrary</span></a></samp></h6>
@@ -37,7 +85,7 @@
             <span class="refdocgen-text-secondary">MyLibrary</span></a></samp></h6>
 
                     <div data-id="base-type"><i>Base type:&nbsp;</i>
-        <samp class="refdocgen-text-secondary"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.object" class="refdocgen-link-secondary"><span class="csharp-lang">object</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span></samp></div>
+        <samp class="refdocgen-text-secondary"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.object" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">object</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span></samp></div>
 
                     
 
@@ -51,13 +99,13 @@
             </div></div><hr>
 
                     <h3 class="lead mt-3">Attributes</h3>
-    <div class="mx-2" data-id="attributes-section"><div data-id="attribute-data"><samp><span class="csharp-lang">
+    <div class="mx-2" data-id="attributes-section"><div data-id="attribute-data"><samp><span class="csharp-lang not-visible">
 
-[<span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.serializableattribute" class="refdocgen-link-secondary"><span class="csharp-lang">Serializable</span><span class="other-lang"></span></a></span><span>]</span></span><span class="other-lang"></span></samp></div><div data-id="attribute-data"><samp><span class="csharp-lang">
+[<span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.serializableattribute" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Serializable</span><span class="other-lang not-visible"></span></a></span><span>]</span></span><span class="other-lang not-visible"></span></samp></div><div data-id="attribute-data"><samp><span class="csharp-lang not-visible">
 
-[<span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializableattribute" class="refdocgen-link-secondary"><span class="csharp-lang">JsonSerializable</span><span class="other-lang"></span></a></span><span>(</span><span class="refdocgen-text-green">typeof(MyLibrary.User)</span><span>, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializableattribute.generationmode" class="refdocgen-link-secondary"><span class="csharp-lang">GenerationMode</span><span class="other-lang">GenerationMode</span></a></span>
+[<span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializableattribute" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">JsonSerializable</span><span class="other-lang not-visible"></span></a></span><span>(</span><span class="refdocgen-text-green">typeof(MyLibrary.User)</span><span>, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonserializableattribute.generationmode" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">GenerationMode</span><span class="other-lang not-visible">GenerationMode</span></a></span>
         <span> = </span>
-    <span class="refdocgen-text-green">2</span><span>)</span><span>]</span></span><span class="other-lang"></span></samp></div></div>
+    <span class="refdocgen-text-green">2</span><span>)</span><span>]</span></span><span class="other-lang not-visible"></span></samp></div></div>
 
                     
 
@@ -65,10 +113,10 @@
                     
 
                     <hr></div><h2 class="display-5 mt-2">Constructors</h2>
-<div class="row" data-id="constructors-section"><div class="col-md-12"><div class="border p-2 mb-2" id="#ctor" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
-<span class="refdocgen-text-primary">User</span><span>(</span><span>)</span></span><span class="other-lang"></span>
+<div class="row" data-id="constructors-section"><div class="col-md-12"><div class="border p-2 mb-2" id=".ctor" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
+<span class="refdocgen-text-primary">User</span><span>(</span><span>)</span></span><span class="other-lang not-visible"></span>
 
-                        <a class="anchor-link" href="##ctor">#</a></samp></h6>
+                        <a class="anchor-link" href="#.ctor">#</a></samp></h6>
 
                 <div class="text-body-secondary fst-italic mb-0" data-id="summary-doc"><div>
             Default constructor.
@@ -83,14 +131,14 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="#ctor(System.String,System.Int32)" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
-<span class="refdocgen-text-primary">User</span><span>(</span><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                </div><div class="border p-2 mb-2" id=".ctor(System.String,System.Int32)" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
+<span class="refdocgen-text-primary">User</span><span>(</span><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>username</span></span><span class="other-lang"></span><span>, </span><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span>username</span></span><span class="other-lang not-visible"></span><span>, </span><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>age</span></span><span class="other-lang"></span><span>)</span></span><span class="other-lang"></span>
+<span>age</span></span><span class="other-lang not-visible"></span><span>)</span></span><span class="other-lang not-visible"></span>
 
-                        <a class="anchor-link" href="##ctor(System.String,System.Int32)">#</a></samp></h6>
+                        <a class="anchor-link" href="#.ctor(System.String,System.Int32)">#</a></samp></h6>
 
                 <div class="text-body-secondary fst-italic mb-0" data-id="summary-doc"><div>
             Initializes a new user using the provided <code class="refdocgen-paramref">username</code> and <code class="refdocgen-paramref">age</code>.
@@ -99,15 +147,15 @@
                 <h3 class="lead my-2">Parameters</h3>
     <div class="mx-2" data-id="parameters-section"><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>username</span></span><span class="other-lang"></span></samp></div>
+<span>username</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>The name of the user.</div></div></div><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>age</span></span><span class="other-lang"></span></samp></div>
+<span>age</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>Age of the user.</div></div></div></div>
 
@@ -119,13 +167,34 @@
                 
 
                 </div></div></div><h2 class="display-5 mt-2">Fields</h2>
-<div class="row" data-id="fields-section"><div class="col-md-12"><div class="border p-2 mb-2" id="username" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">protected readonly</span>
+<div class="row" data-id="fields-section"><div class="col-md-12"><div class="border p-2 mb-2" id="MaxAge" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">private const</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
+
+<span class="refdocgen-text-primary">MaxAge</span>
+
+<span> = </span>
+    <span class="refdocgen-text-green">150</span></span><span class="other-lang not-visible"></span>
+
+                        <a class="anchor-link" href="#MaxAge">#</a></samp></h6>
+
+                
+
+                <div class="text-body-secondary fst-italic mb-0" data-id="summary-doc"><div>
+            Maximum age of the user.
+            </div></div>
+
+                
+
+                
+
+                </div><div class="border p-2 mb-2" id="username" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">protected readonly</span>
+
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
 <span class="refdocgen-text-primary">username</span>
 
-</span><span class="other-lang"></span>
+</span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#username">#</a></samp></h6>
 
@@ -179,15 +248,15 @@
                 
 
                 <div class="mt-3" data-id="seealso-section"><div class="lead">See also</div><div class="text-body-secondary fst-italic" data-id="seealso-item"><a class="refdocgen-see-href" href="http://www.google.com">http://www.google.com</a></div><div class="text-body-secondary fst-italic" data-id="seealso-item"><a class="refdocgen-see-cref" href="./MyLibrary.User.html#MaxAge">max age constant</a></div><div class="text-body-secondary fst-italic" data-id="seealso-item"><a class="refdocgen-see-cref" href="https://learn.microsoft.com/dotnet/api/system.reflection.fieldinfo.isliteral">FieldInfo.IsLiteral</a></div><div class="text-body-secondary fst-italic" data-id="seealso-item"><a class="refdocgen-see-cref" href="./MyLibrary.Tools.Point.html">Point</a></div><div class="text-body-secondary fst-italic" data-id="seealso-item"><code class="refdocgen-see-cref-not-found">!:notFound</code></div></div></div></div></div><h2 class="display-5 mt-2">Properties</h2>
-<div class="row" data-id="properties-section"><div class="col-md-12"><div class="border p-2 mb-2" id="Age" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+<div class="row" data-id="properties-section"><div class="col-md-12"><div class="border p-2 mb-2" id="Age" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" class="refdocgen-link-secondary"><span class="csharp-lang">Nullable</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&gt;</span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.nullable-1" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Nullable</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&gt;</span></span><span class="other-lang not-visible"></span>
 
 <span class="refdocgen-text-primary">Age</span>
 
 <span> { </span><span class="refdocgen-text-tertiary"> get<span class="text-body">; </span></span><span> }</span>
 
-</span><span class="other-lang"></span>
+</span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#Age">#</a></samp></h6>
 
@@ -213,15 +282,15 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="Animals" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                </div><div class="border p-2 mb-2" id="Animals" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang">List</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang">Animal</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&gt;</span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">List</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Animal</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&gt;</span></span><span class="other-lang not-visible"></span>
 
 <span class="refdocgen-text-primary">Animals</span>
 
 <span> { </span><span class="refdocgen-text-tertiary"> get<span class="text-body">; </span></span><span> }</span>
 
-</span><span class="other-lang"></span>
+</span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#Animals">#</a></samp></h6>
 
@@ -246,15 +315,15 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="FirstName" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                </div><div class="border p-2 mb-2" id="FirstName" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
 <span class="refdocgen-text-primary">FirstName</span>
 
 <span> { </span><span class="refdocgen-text-tertiary"> get<span class="text-body">; </span></span><span class="refdocgen-text-tertiary">internal set<span class="text-body">; </span></span><span> }</span>
 
-</span><span class="other-lang"></span>
+</span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#FirstName">#</a></samp></h6>
 
@@ -279,15 +348,15 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="LastName" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                </div><div class="border p-2 mb-2" id="LastName" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
 <span class="refdocgen-text-primary">LastName</span>
 
 <span> { </span><span class="refdocgen-text-tertiary"> get<span class="text-body">; </span></span><span class="refdocgen-text-tertiary"> init<span class="text-body">; </span></span><span> }</span>
 
-</span><span class="other-lang"></span>
+</span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#LastName">#</a></samp></h6>
 
@@ -313,18 +382,18 @@
                 
 
                 </div></div></div><h2 class="display-5 mt-2">Methods</h2>
-<div class="row" data-id="methods-section"><div class="col-md-12"><div class="border p-2 mb-2" id="AddAnimals(MyLibrary.Animal[])" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+<div class="row" data-id="methods-section"><div class="col-md-12"><div class="border p-2 mb-2" id="AddAnimals(MyLibrary.Animal())" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang">void</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">void</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span class="refdocgen-text-primary">AddAnimals</span><span>(</span><span class="csharp-lang"><span class="refdocgen-text-tertiary">params</span>
-    <span></span><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang">Animal[]</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="refdocgen-text-primary">AddAnimals</span><span>(</span><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">params</span>
+    <span></span><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Animal[]</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>animals</span></span><span class="other-lang"></span><span>)</span></span><span class="other-lang"></span>
+<span>animals</span></span><span class="other-lang not-visible"></span><span>)</span></span><span class="other-lang not-visible"></span>
 
-                        <a class="anchor-link" href="#AddAnimals(MyLibrary.Animal[])">#</a></samp></h6>
+                        <a class="anchor-link" href="#AddAnimals(MyLibrary.Animal())">#</a></samp></h6>
 
-                <span class="csharp-lang"></span><span class="other-lang"></span>
+                
 
                 
 
@@ -343,10 +412,10 @@
                 <h3 class="lead my-2">Parameters</h3>
     <div class="mx-2" data-id="parameters-section"><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">params</span>
-    <span></span><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang">Animal[]</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">params</span>
+    <span></span><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Animal[]</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>animals</span></span><span class="other-lang"></span></samp></div>
+<span>animals</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>Animals to add.</div></div></div></div>
 
@@ -355,17 +424,17 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="AddAnimalsByType(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{MyLibrary.Animal}})" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                </div><div class="border p-2 mb-2" id="AddAnimalsByType(System.Collections.Generic.Dictionary(System.String,System.Collections.Generic.List(MyLibrary.Animal)))" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang">void</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">void</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span class="refdocgen-text-primary">AddAnimalsByType</span><span>(</span><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" class="refdocgen-link-secondary"><span class="csharp-lang">Dictionary</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span><span class="text-body-secondary">, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang">List</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang">Animal</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&gt;</span><span class="text-body-secondary">&gt;</span></span><span class="other-lang"></span>
+<span class="refdocgen-text-primary">AddAnimalsByType</span><span>(</span><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Dictionary</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">List</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Animal</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&gt;</span><span class="text-body-secondary">&gt;</span></span><span class="other-lang not-visible"></span>
 
-<span>animals</span></span><span class="other-lang"></span><span>)</span></span><span class="other-lang"></span>
+<span>animals</span></span><span class="other-lang not-visible"></span><span>)</span></span><span class="other-lang not-visible"></span>
 
-                        <a class="anchor-link" href="#AddAnimalsByType(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{MyLibrary.Animal}})">#</a></samp></h6>
+                        <a class="anchor-link" href="#AddAnimalsByType(System.Collections.Generic.Dictionary(System.String,System.Collections.Generic.List(MyLibrary.Animal)))">#</a></samp></h6>
 
-                <span class="csharp-lang"></span><span class="other-lang"></span>
+                
 
                 
 
@@ -384,9 +453,9 @@
                 <h3 class="lead my-2">Parameters</h3>
     <div class="mx-2" data-id="parameters-section"><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" class="refdocgen-link-secondary"><span class="csharp-lang">Dictionary</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span><span class="text-body-secondary">, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang">List</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang">Animal</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&gt;</span><span class="text-body-secondary">&gt;</span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Dictionary</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">List</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Animal</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&gt;</span><span class="text-body-secondary">&gt;</span></span><span class="other-lang not-visible"></span>
 
-<span>animals</span></span><span class="other-lang"></span></samp></div>
+<span>animals</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>Animals to add. Key: animal type, Value: list of animals of the given type.</div></div></div></div>
 
@@ -395,15 +464,15 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="GetAnimalsByType" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                </div><div class="border p-2 mb-2" id="GetAnimalsByType" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" class="refdocgen-link-secondary"><span class="csharp-lang">Dictionary</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span><span class="text-body-secondary">, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang">List</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang">Animal</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&gt;</span><span class="text-body-secondary">&gt;</span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Dictionary</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">List</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Animal</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&gt;</span><span class="text-body-secondary">&gt;</span></span><span class="other-lang not-visible"></span>
 
-<span class="refdocgen-text-primary">GetAnimalsByType</span><span>(</span><span>)</span></span><span class="other-lang"></span>
+<span class="refdocgen-text-primary">GetAnimalsByType</span><span>(</span><span>)</span></span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#GetAnimalsByType">#</a></samp></h6>
 
-                <span class="csharp-lang"></span><span class="other-lang"></span>
+                
 
                 
 
@@ -420,7 +489,7 @@
                 
 
                 <h3 class="lead my-2">Returns</h3>
-<div class="mx-2" data-id="returns-section"><samp data-id="return-type-name"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" class="refdocgen-link-secondary"><span class="csharp-lang">Dictionary</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span><span class="text-body-secondary">, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang">List</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang">Animal</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&gt;</span><span class="text-body-secondary">&gt;</span></span><span class="other-lang"></span></samp>
+<div class="mx-2" data-id="returns-section"><samp data-id="return-type-name"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Dictionary</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">, </span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">List</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="./MyLibrary.Animal.html" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Animal</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&gt;</span><span class="text-body-secondary">&gt;</span></span><span class="other-lang not-visible"></span></samp>
     <div class="text-body-secondary fst-italic" data-id="returns-doc"><div>Dictionary of animals, indexed by their type.</div></div></div>
 
                 
@@ -428,15 +497,15 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="IsAdult" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                </div><div class="border p-2 mb-2" id="IsAdult" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.boolean" class="refdocgen-link-secondary"><span class="csharp-lang">bool</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.boolean" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">bool</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span class="refdocgen-text-primary">IsAdult</span><span>(</span><span>)</span></span><span class="other-lang"></span>
+<span class="refdocgen-text-primary">IsAdult</span><span>(</span><span>)</span></span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#IsAdult">#</a></samp></h6>
 
-                <span class="csharp-lang"></span><span class="other-lang"></span>
+                
 
                 
 
@@ -453,7 +522,7 @@
                 
 
                 <h3 class="lead my-2">Returns</h3>
-<div class="mx-2" data-id="returns-section"><samp data-id="return-type-name"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.boolean" class="refdocgen-link-secondary"><span class="csharp-lang">bool</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span></samp>
+<div class="mx-2" data-id="returns-section"><samp data-id="return-type-name"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.boolean" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">bool</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span></samp>
     <div class="text-body-secondary fst-italic" data-id="returns-doc"><div>True if adult, false otherwise.</div></div></div>
 
                 
@@ -461,15 +530,15 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="PrintProfile" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                </div><div class="border p-2 mb-2" id="PrintProfile" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang">void</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">void</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span class="refdocgen-text-primary">PrintProfile</span><span>(</span><span>)</span></span><span class="other-lang"></span>
+<span class="refdocgen-text-primary">PrintProfile</span><span>(</span><span>)</span></span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#PrintProfile">#</a></samp></h6>
 
-                <span class="csharp-lang"></span><span class="other-lang"></span>
+                
 
                 
 
@@ -492,18 +561,18 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="PrintProfile(System.String)" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                </div><div class="border p-2 mb-2" id="PrintProfile(System.String)" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang">void</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">void</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span class="refdocgen-text-primary">PrintProfile</span><span>(</span><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="refdocgen-text-primary">PrintProfile</span><span>(</span><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>format</span></span><span class="other-lang"></span><span> = </span>
-    <span class="refdocgen-text-green">"json"</span><span>)</span></span><span class="other-lang"></span>
+<span>format</span></span><span class="other-lang not-visible"></span><span> = </span>
+    <span class="refdocgen-text-green">"json"</span><span>)</span></span><span class="other-lang not-visible"></span>
 
                         <a class="anchor-link" href="#PrintProfile(System.String)">#</a></samp></h6>
 
-                <span class="csharp-lang"></span><span class="other-lang"></span>
+                
 
                 
 
@@ -520,38 +589,38 @@
                 
 
                 <h3 class="lead my-2">Parameters</h3>
-    <div class="mx-2" data-id="parameters-section"><div data-id="parameter-data"><div data-id="attribute-data"><samp><span class="csharp-lang">
+    <div class="mx-2" data-id="parameters-section"><div data-id="parameter-data"><div data-id="attribute-data"><samp><span class="csharp-lang not-visible">
 
-[<span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.diagnostics.codeanalysis.notnullattribute" class="refdocgen-link-secondary"><span class="csharp-lang">NotNull</span><span class="other-lang"></span></a></span><span>]</span></span><span class="other-lang"></span></samp></div>
+[<span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.diagnostics.codeanalysis.notnullattribute" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">NotNull</span><span class="other-lang not-visible"></span></a></span><span>]</span></span><span class="other-lang not-visible"></span></samp></div>
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>format</span></span><span class="other-lang"></span></samp></div>
+<span>format</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>Format used for printing the profile.</div></div></div></div><h3 class="lead mt-3">Attributes</h3>
-    <div class="mx-2" data-id="attributes-section"><div data-id="attribute-data"><samp><span class="csharp-lang">
+    <div class="mx-2" data-id="attributes-section"><div data-id="attribute-data"><samp><span class="csharp-lang not-visible">
 
-[<span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.obsoleteattribute" class="refdocgen-link-secondary"><span class="csharp-lang">Obsolete</span><span class="other-lang"></span></a></span><span>]</span></span><span class="other-lang"></span></samp></div></div>
-
-                
-                
+[<span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.obsoleteattribute" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">Obsolete</span><span class="other-lang not-visible"></span></a></span><span>]</span></span><span class="other-lang not-visible"></span></samp></div></div>
 
                 
+                
 
-                </div><div class="border p-2 mb-2" id="PrintProfile(System.String,System.Collections.Generic.List{System.String})" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">public</span>
+                
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang">void</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                </div><div class="border p-2 mb-2" id="PrintProfile(System.String,System.Collections.Generic.List(System.String))" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">public</span>
 
-<span class="refdocgen-text-primary">PrintProfile</span><span>(</span><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">void</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>format</span></span><span class="other-lang"></span><span>, </span><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang">List</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&gt;</span></span><span class="other-lang"></span>
+<span class="refdocgen-text-primary">PrintProfile</span><span>(</span><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>keywords</span></span><span class="other-lang"></span><span> = </span>
-    <span class="refdocgen-text-green">null</span><span>)</span></span><span class="other-lang"></span>
+<span>format</span></span><span class="other-lang not-visible"></span><span>, </span><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">List</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&gt;</span></span><span class="other-lang not-visible"></span>
 
-                        <a class="anchor-link" href="#PrintProfile(System.String,System.Collections.Generic.List{System.String})">#</a></samp></h6>
+<span>keywords</span></span><span class="other-lang not-visible"></span><span> = </span>
+    <span class="refdocgen-text-green">null</span><span>)</span></span><span class="other-lang not-visible"></span>
 
-                <span class="csharp-lang"></span><span class="other-lang"></span>
+                        <a class="anchor-link" href="#PrintProfile(System.String,System.Collections.Generic.List(System.String))">#</a></samp></h6>
+
+                
 
                 
 
@@ -570,15 +639,15 @@
                 <h3 class="lead my-2">Parameters</h3>
     <div class="mx-2" data-id="parameters-section"><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>format</span></span><span class="other-lang"></span></samp></div>
+<span>format</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>Format used for printing the profile.</div></div></div><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang">List</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span><span class="text-body-secondary">&gt;</span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">List</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&lt;</span><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span><span class="text-body-secondary">&gt;</span></span><span class="other-lang not-visible"></span>
 
-<span>keywords</span></span><span class="other-lang"></span></samp></div>
+<span>keywords</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>List of keywords.</div></div></div></div>
 
@@ -587,29 +656,29 @@
 
                 
 
-                </div><div class="border p-2 mb-2" id="ProcessValues(System.Int32@,System.Int32@,System.String,System.Int32@,System.Double)" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">internal static</span>
+                </div><div class="border p-2 mb-2" id="ProcessValues(System.Int32-,System.Int32-,System.String,System.Int32-,System.Double)" data-id="member-data"><h6 class="mb-1" data-id="member-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">internal static</span>
 
-<span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang">void</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.void" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">void</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span class="refdocgen-text-primary">ProcessValues</span><span>(</span><span class="csharp-lang"><span class="refdocgen-text-tertiary">in</span>
-    <span></span><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span class="refdocgen-text-primary">ProcessValues</span><span>(</span><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">in</span>
+    <span></span><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>inValue</span></span><span class="other-lang"></span><span>, </span><span class="csharp-lang"><span class="refdocgen-text-tertiary">ref</span>
-    <span></span><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span>inValue</span></span><span class="other-lang not-visible"></span><span>, </span><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">ref</span>
+    <span></span><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>refValue</span></span><span class="other-lang"></span><span>, </span><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span>refValue</span></span><span class="other-lang not-visible"></span><span>, </span><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>s1</span></span><span class="other-lang"></span><span>, </span><span class="csharp-lang"><span class="refdocgen-text-tertiary">out</span>
-    <span></span><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span>s1</span></span><span class="other-lang not-visible"></span><span>, </span><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">out</span>
+    <span></span><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>outValue</span></span><span class="other-lang"></span><span>, </span><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.double" class="refdocgen-link-secondary"><span class="csharp-lang">double</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+<span>outValue</span></span><span class="other-lang not-visible"></span><span>, </span><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.double" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">double</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>d2</span></span><span class="other-lang"></span><span> = </span>
-    <span class="refdocgen-text-green">150</span><span>)</span></span><span class="other-lang"></span>
+<span>d2</span></span><span class="other-lang not-visible"></span><span> = </span>
+    <span class="refdocgen-text-green">150</span><span>)</span></span><span class="other-lang not-visible"></span>
 
-                        <a class="anchor-link" href="#ProcessValues(System.Int32@,System.Int32@,System.String,System.Int32@,System.Double)">#</a></samp></h6>
+                        <a class="anchor-link" href="#ProcessValues(System.Int32-,System.Int32-,System.String,System.Int32-,System.Double)">#</a></samp></h6>
 
-                <span class="csharp-lang"></span><span class="other-lang"></span>
+                
 
                 
 
@@ -628,36 +697,36 @@
                 <h3 class="lead my-2">Parameters</h3>
     <div class="mx-2" data-id="parameters-section"><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">in</span>
-    <span></span><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">in</span>
+    <span></span><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>inValue</span></span><span class="other-lang"></span></samp></div>
+<span>inValue</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>An input value.</div></div></div><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">ref</span>
-    <span></span><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">ref</span>
+    <span></span><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>refValue</span></span><span class="other-lang"></span></samp></div>
+<span>refValue</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>A reference value.</div></div></div><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang">string</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.string" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">string</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>s1</span></span><span class="other-lang"></span></samp></div>
+<span>s1</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"></div></div><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="refdocgen-text-tertiary">out</span>
-    <span></span><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang">int</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="refdocgen-text-tertiary">out</span>
+    <span></span><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.int32" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">int</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>outValue</span></span><span class="other-lang"></span></samp></div>
+<span>outValue</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"><div>An output value.</div></div></div><div data-id="parameter-data">
 
-                <div data-id="parameter-name"><samp><span class="csharp-lang"><span class="csharp-lang"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.double" class="refdocgen-link-secondary"><span class="csharp-lang">double</span><span class="other-lang"></span></a></span></span><span class="other-lang"></span>
+                <div data-id="parameter-name"><samp><span class="csharp-lang not-visible"><span class="csharp-lang not-visible"><span class="refdocgen-text-secondary"><a href="https://learn.microsoft.com/dotnet/api/system.double" class="refdocgen-link-secondary"><span class="csharp-lang not-visible">double</span><span class="other-lang not-visible"></span></a></span></span><span class="other-lang not-visible"></span>
 
-<span>d2</span></span><span class="other-lang"></span></samp></div>
+<span>d2</span></span><span class="other-lang not-visible"></span></samp></div>
 
                 <div class="text-body-secondary fst-italic mb-2" data-id="parameter-doc"></div></div></div>
 
